@@ -38,7 +38,7 @@ impl<'info> JupiterSwap<'info> {
             AccountMeta::new_readonly(self.token_program.key(), false),
             AccountMeta::new_readonly(self.user_authority.key(), true),
             // AccountMeta::new(self.user_source_token.key(), false),
-            // AccountMeta::new(self.user_destination_token.key(), false),
+            AccountMeta::new(self.user_destination_token.key(), false),
         ];
 
         // Create the instruction
